@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import { PageTop } from './compornents/pageTop';
+import { HomePage } from './pages/homePage';
 
 function App() {
   return (
     <div className="App">
-      <PageTop/>
+      <HomePage/>
     </div>
   );
 }

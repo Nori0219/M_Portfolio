@@ -3,10 +3,19 @@
         text-align: center;
     }
     .portfolio-gradient{
-        
+        z-index: 2;
         .profile-cover{
             img{
+                @media (max-width: 767px){
+                    height: 150px;
+                    
+                }
+                @media (max-width: 550px){
+                    height: 150px;
+                }
                 width: 100%;
+                height: auto;
+                object-fit: cover;
             }
             
         }
@@ -16,16 +25,24 @@
         padding-bottom: 50px;
         margin: 0 auto;
         //background-color: aquamarine;
+        
         .prof-main{
-            width: 450px;
+            @media (max-width: 767px){
+                width: 490px;
+            }
+            @media (max-width: 550px){
+                width: 100%;
+            }
+            width: 490px;
             position: relative;
             z-index: 2;
             margin: auto;
 
             .prof-img{
+                z-index: 5;
                 img{
-                    width:150px;
-                    height:150px;
+                    width:180px;
+                    height:180px;
                     object-fit:cover;
                     border-radius:50%;
                     border: 5px solid white;
@@ -43,8 +60,12 @@
                 margin-top: 15px;
             }
             .descr{
+                
+                @media (max-width: 550px){
+                margin: 15px 20px 0px;  //スマホサイズの左右の余白調整
+                }
                 font-size: 15px;
-                margin-top: 15px;
+                margin: 15px auto 0;
                 text-align: left;
                 line-height: 1.8;
             }
