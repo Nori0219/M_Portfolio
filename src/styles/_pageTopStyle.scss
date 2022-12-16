@@ -1,0 +1,53 @@
+.profile{
+    .center{
+        text-align: center;
+    }
+    .portfolio-gradient{
+        
+        .profile-cover{
+            img{
+                width: 100%;
+            }
+            
+        }
+    }
+    .prof-wraper{
+        //max-width: 900px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        //background-color: aquamarine;
+        .prof-main{
+            width: 450px;
+            position: relative;
+            z-index: 2;
+            margin: auto;
+
+            .prof-img{
+                img{
+                    width:150px;
+                    height:150px;
+                    object-fit:cover;
+                    border-radius:50%;
+                    border: 5px solid white;
+                }
+            }
+            .name{
+                font-size: 25px;
+                margin-top: 15px;
+                line-height: 1.4;
+
+            }
+            .job-title{
+                font-size: 14px;
+                color:rgba(58,60,72,0.45) ;
+                margin-top: 15px;
+            }
+            .descr{
+                font-size: 15px;
+                margin-top: 15px;
+                text-align: left;
+                line-height: 1.8;
+            }
+        }
+    }
+}
