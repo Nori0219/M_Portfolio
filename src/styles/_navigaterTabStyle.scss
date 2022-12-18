@@ -1,9 +1,55 @@
 .navigaterTab{
+    text-align: center;
+
     .navigaterTab-wrapper{
-        h1{
-            font-size: 800px;
+        .cp_hr06 {
+            position: relative;
+            height: 1px;
+            border-width: 0;
+            background-image: -webkit-linear-gradient(left,
+            transparent 0%,#283593 50%,transparent 100%);
+            background-image:         linear-gradient(90deg,
+            transparent 0%,#283593 50%,transparent 100%);
         }
         .tab-List{
+            ul{
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                li{
+                    display: inline-block;
+                    margin:0px 20px;
+                    
+                    @media (max-width: 767px){
+                        margin: 0px 14px;
+                    }
+                    @media (max-width: 550px){
+                        margin: 0px 5px;
+                    }
+                }
+            }
+            .aws-btn {
+                --button-default-height: 55px;
+                --button-default-font-size: 14px;
+                --button-default-border-radius: 6px;
+                --button-horizontal-padding: 28px;
+                --button-raise-level: 6px;
+                --button-hover-pressure: 2;
+                --transform-speed: 0.4s;
+                --button-primary-color: #3a3a3a;
+                --button-primary-color-dark: #141414;
+                --button-primary-color-light: #fbfbfb;
+                --button-primary-color-hover: #2d2d2d;
+                --button-primary-color-active: #212121;
+                --button-primary-border: 2px solid #3a3a3a;
+                --button-secondary-color: #fbfbfb;
+                --button-secondary-color-dark: #3a3a3a;
+                --button-secondary-color-light: #3a3a3a;
+                --button-secondary-color-hover: #eeeeee;
+                --button-secondary-color-active: #e2e2e2;
+                --button-secondary-border: 2px solid #3a3a3a;
+                
+              }
 
         }
     }

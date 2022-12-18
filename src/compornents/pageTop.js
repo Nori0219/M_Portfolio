@@ -2,8 +2,8 @@ import React from 'react'
 import '/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_pageTopStyle.scss'
 import Bgimage from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/PORT FOLIO画像.svg';
 import Icon from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/pofileImage.JPG';
-import { Header } from './header'
-import { NavigaterTab } from './navigaterTab';
+import { Header } from './parts/header'
+import { NavigaterTab } from './parts/navigaterTab';
 
 export const PageTop = () => {
   return (
