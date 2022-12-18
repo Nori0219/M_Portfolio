@@ -1,0 +1,27 @@
+.skillCard{
+    display: inline-block;
+    width: 200px;
+    padding-top: 16px;
+    margin: 0 18px ;
+    margin-bottom: 36px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 0 6px #e8e8e8;
+    background-color: #fff;
+    cursor: pointer;
+    .skillItem{
+        // .skillImage{
+        //  //width: 125px; //SVGはhtmlのimgで指定する
+        // }
+        hr{
+            background-color: #EDF3F9;
+            height: 2px;
+            border: none;
+        }
+        .skillName{
+            padding: 10px 0px 10px ;
+            color: #2b546a;
+        }
+    }
+    
+}

@@ -1,0 +1,17 @@
+.skill-wrapper{
+    text-align: center;
+    margin-top: 45px;
+    margin: 0 auto;
+    padding: 0 80px;
+    .title{
+        h2{
+            text-align: justify;
+            margin: 0px 0px 24px;
+        }
+    }
+    .skillList{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0px;
+    }
+}

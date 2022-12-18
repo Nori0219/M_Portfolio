@@ -1,6 +1,5 @@
 import React from 'react'
 import '/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_navigaterTabStyle.scss'
-import AwesomeButtonStyles from 'react-awesome-button/src/styles/styles.scss';
 import { AwesomeButton } from "react-awesome-button";
 import 'react-awesome-button/dist/styles.css';
 
