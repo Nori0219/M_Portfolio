@@ -1,0 +1,55 @@
+@import "https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
+
+@mixin prefix($prop, $val) {
+	@each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+		#{$prefix}#{$prop}: $val;
+	}
+}
+
+header {	
+	background-color: #2b2e48;
+	padding: 10px;
+    height: 74px;
+    @media (max-width: 543px){
+       // height: 110px; //Gitリンク以外を追加したらヘッダーの幅を変更する
+    }
+
+	@include prefix(box-shadow, 0 3px 3px rgba(0,0,0,0.05)); 
+	@extend %clearfix;
+    
+    %clearfix {
+        &:after, &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+    }
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+	.logo {
+		color: #ee4d4d;
+		float: left;
+        margin: 0px;
+		// font:{
+		// 	size: 22px;
+		// 	weight: 500;
+		// }
+		
+		> span {
+			color: lighten(#ee4d4d, 20%);
+			font-weight: 300;
+		}
+	}
+
+	.social {
+		float: right;
+		.btn {
+			font-family: "Dosis";
+			font-size: 14px;
+			margin: 10px 5px;
+		}
+	}
+}
