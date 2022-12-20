@@ -1,0 +1,76 @@
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    article{
+        border-radius: 12px;
+        padding: 20px;
+        width: 80%;
+        @media (max-width: 767px){
+            width: 80%;
+            
+        }
+        @media (max-width: 550px){
+            width: 100%;
+        }
+        .articleInner{
+            background-color:white;
+            border-radius: 12px;
+            .artticleTop{
+                //padding-top: 16px;
+                object-fit: cover;
+                img{
+                    border-radius: 12px 12px 0 0;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .articleTitle{
+                a{
+                    color: #333;
+                    font-style: bold;
+                    font-weight: 800;
+                    font-size: 24px;
+                    @media (max-width: 550px){
+                        font-size: 16px;
+                    }
+                    padding: 20px 20px 0;
+                    margin: 0;
+                    text-decoration: none;
+                    -ms-word-wrap: break-word;
+                    word-wrap: break-word;
+
+                    position: relative;
+                    display: inline-block;
+                    transition: .3s;
+                    &:after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        content: '';
+                        width: 0;
+                        height: 1px;
+                        background-color: #75bdff;
+                        transition: .3s;
+                      }
+                    &:hover {
+                        &:after{
+                            width: 100%; 
+                        }            
+                    }
+                }
+            }
+            .articleDetail{
+                .Date{
+                    font-size: 16px;
+                    padding: 14px 20px;
+                    margin: 0;
+                    color: #999;
+                    text-align: left;
+                };
+            }
+        
+        }
+    }
+}

@@ -186,6 +186,7 @@ $timeline-color: $primary-color;
 			.timeline-content {
 				width: 90%;
 				float: right;
+				margin-right: 8px;
 				
 				&:before, &.right:before {
 					left: 10%;

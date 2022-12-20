@@ -4,7 +4,8 @@ import { PageTop } from '../views/pageTop'
 import { Header } from '../parts/header'
 import { NavigaterTab } from '../parts/navigaterTab'
 import { SkillView } from '../views/skillView'
-import { Expense } from '../parts/expense'
+import { Expense } from '../views/expense'
+import { Prodct } from '../parts/prodct'
 
 
 export const HomePage = () => {
@@ -15,9 +16,9 @@ export const HomePage = () => {
         <NavigaterTab />
         <div className="contentArea">
           <div className="main">
-            <h2>Skills</h2>
-            <SkillView />
             <h2>Ploducts</h2>
+            <Prodct />
+            <h2>Skills</h2>
             <SkillView />
             <h2>Experience</h2>
             <Expense/>
