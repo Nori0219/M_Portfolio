@@ -2,9 +2,9 @@
 
 // Variables
 $bg-body: #f9f9f9;
-$red: #ee4d4d;
+$ski: #75bdff;
 $blue: #2b2e48;
-$primary-color: $red;
+$primary-color: $ski;
 $secondary-color: $blue;
 
 
@@ -45,9 +45,9 @@ $timeline-color: $primary-color;
 // Timeline
 #timeline {
 	width: 100%;
-  margin: 30px auto;
+	margin: 30px auto;
 	position: relative;
-  padding: 0 10px;
+  	padding: 0 10px;
 	@include prefix(transition, all .4s ease);
 
 	&:before {
@@ -68,44 +68,60 @@ $timeline-color: $primary-color;
 	}
 	
 	.timeline-item {
+		text-align: left;
 		margin-bottom: 50px;
 		position: relative;
 		@extend %clearfix;
 
 		.timeline-icon {
 			background: $timeline-color;
-			width: 50px;
-			height: 50px;
+			width: 22px;
+			height: 22px;
 			position: absolute;
 			top: 0;
 			left: 50%;
 			overflow: hidden;
-			margin-left: -23px;
+			margin-left: -9.5px;
 			@include prefix(border-radius, 50%);
-
-			svg {
-				position: relative;
-				top: 14px;
-				left: 14px;
-			}
 		}
 
 		.timeline-content {
 			width: 45%;
 			background: #fff;
-			padding: 20px;
+			border-top: solid 8px #75bdff;
+    		border-radius: 4px 4px 6px 6px;
+			padding:20px;
 			@include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
-			@include prefix(border-radius, 5px);
+			@include prefix(border-radius, 8px);
 			@include prefix(transition, all .3s ease);
 
-			h2 {
-				padding: 15px;
-				background: $timeline-color;
-				color: #fff;
-				margin: -20px -20px 0 -20px;
-				font-weight: 300;
-				@include prefix(border-radius, 3px 3px 0 0);
+			.timeline-year{
+				font-weight: 800;
+				font-size: 0.87em;
+				color: #75bdff;
+				span{
+					margin-right: 10px;
+				}
+				
 			}
+
+			h2 {
+				font-weight: bold;
+				font-size: 1.2em;
+    			margin: 0.2em 0;
+				//padding: 15px;
+				//background: $timeline-color;
+				//color: $timeline-color;
+				margin: 8px 0px 0px;
+				//font-weight: 300;
+				@include prefix(border-radius, 0px 0px 0 0);
+			}
+
+			p{
+				font-size: 0.92em;
+    			color: rgba(58,60,72,0.45);
+			}
+				
 
 			&:before {
 				content: '';
@@ -161,7 +177,7 @@ $timeline-color: $primary-color;
 	#timeline {
 		margin: 30px;
 		padding: 0px;
-    width: 90%;
+    	width: 90%;
 		&:before {
 			left: 0;
 		}
