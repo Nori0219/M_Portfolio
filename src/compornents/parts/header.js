@@ -9,7 +9,7 @@ export const Header = () => {
 				My<span>PORTFOLIO</span>
 			</h1>
 			<section class="social">
-				<a class="btn" href="https://github.com/Nori0219">Github</a>
+				<a class="btn" href="https://github.com/Nori0219" target="_blank">Github</a>
 				{/* <a class="btn" href="https://www.twitter.com/_brunoweb">Twitter</a> */}
 			</section>
 		</div>

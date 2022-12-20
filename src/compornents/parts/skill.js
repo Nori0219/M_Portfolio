@@ -7,8 +7,6 @@ export const Skill = (props) => {
     <div className="skillCard">
       <div className="skillItem">
         <div className="skillImage">
-            {/* <img  src={html} width="58%" alt=""/>  */}
-
             <img  src={props.image} width="58%" alt=""/>
         </div>
         
