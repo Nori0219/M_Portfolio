@@ -4,7 +4,7 @@ import '/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_article
 export const Article = (props) => {
   return (
     <div className="Article">
-        <article >
+        <div className="article" >
             {/* <div className="articleInner">
                 <div className="artticleTop">
                     <img src={SOLA} width=""alt="" />
@@ -24,7 +24,7 @@ export const Article = (props) => {
                     <img src={props.artiimage} width=""alt="" />
                 </div>
                 <div className="articleTitle">
-                    <a href="#">{props.articleTitle}</a>
+                    <a>{props.articleTitle}</a>
                 </div>
                 <div className="articleDetail">
                     <div className="Date">
@@ -32,7 +32,7 @@ export const Article = (props) => {
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
   )
 }

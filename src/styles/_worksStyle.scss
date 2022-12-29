@@ -1,0 +1,27 @@
+.work-wrapper{
+    @media (max-width: 767px){
+        padding: 0 30px;
+        
+    }
+    @media (max-width: 550px){
+        padding: 0 0px;
+    }
+
+    .workList{
+        animation: fadeIn 2s ease;
+        //display: flex;
+        //justify-content: center;
+        .works{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .articleInner{
+                &:hover{
+                    transition: .3s;
+                    transform: scale(1.03);
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+                }
+            }
+        }
+    }
+}

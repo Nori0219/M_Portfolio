@@ -1,12 +1,9 @@
 .Article{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    article{
+    .article{
         border-radius: 12px;
         padding: 20px;
         width: 80%;
+        margin: auto;//ブロック要素を中央揃えにする方法
         @media (max-width: 767px){
             width: 80%;
             

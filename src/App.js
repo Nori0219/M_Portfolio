@@ -12,7 +12,6 @@ function App() {
       <Route path={`/`} element={<ResumePage />} />
       <Route path={`/Works/`} element={<WorksPage />} />
       {/* <Route path={`/Other/`} element={<OtherPage />} /> */}
-      
     </Routes>
   </BrowserRouter>
   );

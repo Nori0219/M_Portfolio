@@ -4,6 +4,7 @@ import { Header } from '../parts/header'
 import { NavigaterTab } from '../parts/navigaterTab'
 import { PageTop } from '../views/pageTop'
 import { Works } from '../templates/works'
+import { WorkView } from '../views/workView'
 
 export const WorksPage = () => {
   return (
@@ -12,9 +13,9 @@ export const WorksPage = () => {
         <PageTop /> 
         <NavigaterTab />
         <div className="contentArea">
-          <div className="main">
+          <div className="max-widh">
             <h2>Works</h2>
-            <Works/>
+            <WorkView/>
           </div>
         </div>
         <Header />

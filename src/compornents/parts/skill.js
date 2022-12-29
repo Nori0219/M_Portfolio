@@ -1,6 +1,5 @@
 import React from 'react'
 import '/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_skillCardStyle.scss'
-import html from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/HTML.svg';
 export const Skill = (props) => {
   console.log(props);
   return (

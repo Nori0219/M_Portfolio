@@ -1,7 +1,5 @@
 import React from 'react'
 import { Skill } from '../parts/skill'
-import html from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/HTML.svg';
-import css from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/CSS.svg';
 import htmlCss from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/HTML CSS.svg';
 import JavaScript from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/JavaScript.svg';
 import Flutter from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SkillSetsSVG/Flutter.svg';
