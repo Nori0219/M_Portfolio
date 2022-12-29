@@ -1,8 +1,11 @@
 
-.main{
-    // background-color: #EDF3F9;
-    max-width: 900px;
-    padding: 0 0px;
-    margin: 0 auto;
-    text-align: center;
+.wrap{
+    background-color: #EDF3F9;
+    .main{
+        //background-color: #EDF3F9;
+        max-width: 900px;
+        padding: 0 0px;
+        margin: 0 auto;
+        text-align: center;
+    }
 }

@@ -5,7 +5,6 @@ import { Skill } from '../parts/skill'
 import { SkillCards } from '../templates/skillCards'
 
 export const SkillView = () => {
-  const name='位次';
   return (
     <div className="skill-wrapper">
       <div className="title">

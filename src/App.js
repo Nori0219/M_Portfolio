@@ -1,13 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.scss';
-import { HomePage } from './compornents/pages/homePage';
+import { ResumePage } from './compornents/pages/resumePage';
+import { WorksPage } from './compornents/pages/worksPage';
 
 
 function App() {
   return (
-    <div className="App">
-      <HomePage/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path={`/`} element={<ResumePage />} />
+      <Route path={`/Works/`} element={<WorksPage />} />
+      {/* <Route path={`/Other/`} element={<OtherPage />} /> */}
+      
+    </Routes>
+  </BrowserRouter>
   );
 }
 

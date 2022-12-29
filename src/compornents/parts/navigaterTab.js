@@ -1,9 +1,11 @@
 import React from 'react'
 import '/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_navigaterTabStyle.scss'
 import { AwesomeButton } from "react-awesome-button";
+import { useNavigate } from "react-router-dom"
 import 'react-awesome-button/dist/styles.css';
 
 export const NavigaterTab = () => {
+    const navigate = useNavigate()
   return (
     <div>
         <nav className="navigaterTab">
@@ -17,8 +19,8 @@ export const NavigaterTab = () => {
                                 //cssModule={AwesomeButtonStyles}
                                 type="secondary"
                                 onPress={() => {
-                                    // do something
-                                    console.log('Hello');
+                                    navigate('/');
+                                    console.log('ResumePage');
                                 }}>
                                 Resume
                             </AwesomeButton>
@@ -29,7 +31,8 @@ export const NavigaterTab = () => {
                                 type="secondary"
                                 onPress={() => {
                                     // do something
-                                    
+                                    navigate('/Works/');
+                                    console.log('WorksPage');
                                 }}>
                                 Works
                             </AwesomeButton>
@@ -40,7 +43,7 @@ export const NavigaterTab = () => {
                                 type="secondary"
                                 onPress={() => {
                                     // do something
-                                    
+                                    console.log('OtherPage');
                                 }}>
                                 other
                             </AwesomeButton>
