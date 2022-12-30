@@ -21,7 +21,7 @@ export const Article = (props) => {
 
             <div className="articleInner">
                 <div className="articleTop">
-                    <img src={props.artiimage} width=""alt="" />
+                    <img src={props.articleimage} width=""alt="" />
                 </div>
                 <div className="articleTitle">
                     <a>{props.articleTitle}</a>

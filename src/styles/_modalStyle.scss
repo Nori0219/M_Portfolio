@@ -1,5 +1,6 @@
 .modal {
     position: fixed;
+    display: flex;
     z-index: 15;
     top: 0;
     right: 0;
@@ -7,11 +8,11 @@
     left: 0;
     background-color: rgba(108, 105, 105, 0.14);
     .modal-inner {
-        position: absolute;
-        top: 8%;
-        right: 0;
-        left: 0;
-        width: 480px;
+        // position: absolute;
+        // top: 8%;
+        // right: 0;
+        // left: 0;
+        width: 50%;
         padding-bottom: 60px;
         margin: auto;
         background-color: rgb(255, 255, 255);

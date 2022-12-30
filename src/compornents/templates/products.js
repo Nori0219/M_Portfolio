@@ -5,7 +5,7 @@ import SOLA from '/Users/norichika/programming/react-pj/nori-portfolio/src/asset
 export const Products = () => {
     const productList = [
         {
-            artiimage: SOLA,
+            articleimage: SOLA,
             articleTitle:'SOLA | 三重大学天文サークル公式アプリ',
             articleDate:'2022年11月23日',
         },
@@ -22,7 +22,7 @@ export const Products = () => {
         {productList.map((productItem) => {            
               return (         
                 <Article    
-                    artiimage={productItem.artiimage}            
+                    articleimage={productItem.articleimage}            
                     articleTitle={productItem.articleTitle}    
                     articleDate={productItem.articleDate}   
                 />    

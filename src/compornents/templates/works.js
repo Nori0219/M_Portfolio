@@ -1,76 +1,74 @@
 import React from 'react'
-import{ useState } from 'react';
+import{ useState, useRef } from 'react';
 import { Article} from '../parts/article';
-import { Modal } from '../parts/modal';
 import SOLA from '/Users/norichika/programming/react-pj/nori-portfolio/src/assets/images/SOLA App (480 × 270 px).svg';
 import "/Users/norichika/programming/react-pj/nori-portfolio/src/styles/_modalStyle.scss"
 
 export const Works = () => {
     const workList = [
         {
-            artiimage: SOLA,
+            articleimage: SOLA,
             articleTitle:'SOLA | 三重大学天文サークル公式アプリ',
             articleDate:'2022年11月23日',
             introduction:'WEBページはHTML、CSSという言語によってその見た目が作られています。 実際にWEBページを作りながら学んでみましょう！',
         },
         {
-          artiimage: 'https://placehold.jp/f0a119/ffffff/480x270.png',
+          articleimage: 'https://placehold.jp/f0a119/ffffff/480x270.png',
           articleTitle:'Mieet | 三重大生限定コミュニティアプリ',
           articleDate:'2022年11月4日',
-          introduction:'三重大愛いあい',
+          introduction:'uuouou',
         },
         {
-            artiimage: 'https://placehold.jp/19c5f0/ffffff/480x270.png',
+            articleimage: 'https://placehold.jp/19c5f0/ffffff/480x270.png',
             articleTitle:'React | ポートフォリオサイト',
             articleDate:'2023年月1日5日',
             introduction:'三重大愛いあい',
         },
-        // {
-        //   artiimage: 'https://placehold.jp/f0a119/ffffff/480x270.png',
-        //   articleTitle:'帰れまてん',
-        //   articleDate:'2022年11月4日',
-        //   introduction:'WEBページはHTML、CSSという言語によってその見た目が作られています。 実際にWEBページを作りながら学んでみましょう！',
-        // },
        
       ];
 
-      const [isModalOpen, setModalOpen] = useState(false)
-
-      const openModal = () => {
-        setModalOpen(true);
-      }
-      const closeModal = (e) => {
-        e.stopPropagation(); //親のイベントへの伝搬を防ぐ
-        setModalOpen(false);
-      }
-
+     
       const [selectedItem, setSelectedItem] = useState('')
       const onOpenDialog = (name) => {
         setSelectedItem(name)
+        console.log(selectedItem)
       }
     
-      const onCloseDialog = () => {
-        setSelectedItem('')
+      const onCloseDialog = (e) => {
+        e.stopPropagation(); //親のイベントへの伝搬を防ぐ
+        setSelectedItem('other')
+        console.log(selectedItem)
       }
-      
-      //isOpen={workItem === selectedItem}
+
+      // useRef Hookを使って、HTMLの<body>要素のrefを取得します
+      const bodyRef = useRef(null);
+
+      // モーダルを表示するときに、<body>要素のstyle属性を更新します
+      if (selectedItem !== ''&& bodyRef.current !== null) {
+      bodyRef.current.style.overflow = 'hidden';
+      } else if (bodyRef.current !== null) {
+      // モーダルを非表示にするときには、<body>要素のstyle属性を元に戻します
+      bodyRef.current.style.overflow = '';
+      }
+
+
 
 
   return (
-    <div className="works">
+    <div className="works" ref={bodyRef}>
         {workList.map((workItem) => {            
               return ( 
+                <item key={workItem.articleTitle}>
                 <div className='Article'
-                  onClick = {openModal}
+                  onClick = {() => onOpenDialog(workItem.articleTitle)}
                 >   
                 <Article 
-                    artiimage={workItem.artiimage}            
+                    articleimage={workItem.articleimage}            
                     articleTitle={workItem.articleTitle}    
                     articleDate={workItem.articleDate}   
                 />
                 <div>
-                {
-                isModalOpen? (
+                { workItem.articleTitle === selectedItem && ( //タップした記事とモーダルが同じであれば描画
                   <div className='modal'>
                     <div className='modal-inner'>
                       <div className='modal-header'></div>
@@ -79,21 +77,18 @@ export const Works = () => {
                         <p>{workItem.introduction}</p>
                       </div>
                       <button className='modal-close-btn'
-                        onClick = {closeModal}
+                        onClick = {onCloseDialog}
                       >
                         とじる
                       </button>
                     </div>
-                  </div>
-                ):(
-                <div></div>
-                
-                )
+                  </div>)
                 }
                 </div>
-                
                 </div> 
-              );            
+                </item>
+              );  
+                        
             })}
         <div>
         </div>
